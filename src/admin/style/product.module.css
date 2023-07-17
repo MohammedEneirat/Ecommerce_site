@@ -1,0 +1,10 @@
+.cards{
+    border: solid;
+    margin-top: 3rem;
+    background-color: rgb(241, 237, 237);
+}
+.myImage{
+    height: 20rem;
+    border-bottom: solid;
+    background-color: rgb(27, 89, 3);
+}
