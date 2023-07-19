@@ -33,7 +33,7 @@ function Nav() {
                                     <span className='h5'>Order</span>
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><Link className="dropdown-item" >Action</Link></li>
+                                    <li><Link className="dropdown-item" to="/order" >order</Link></li>
                                     <li><hr className="dropdown-divider" /></li> 
                                     <li><Link className="dropdown-item" >Another action</Link></li>
                                     <li><hr className="dropdown-divider" /></li> 
