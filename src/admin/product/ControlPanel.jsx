@@ -3,21 +3,21 @@ import AddProduct from './AddProduct';
 import ChangeProduct from './ChangeProduct';
 
 function ControlPanel() {
-    let [btnSelect , setBtn] = useState("Update");
-    let [isActive,setActive] = useState(false)
+    let [btnSelect, setBtn] = useState("Update");
+    let [isActive, setActive] = useState(false)
 
-    const MyComponent =()=>{
-        if(btnSelect === "Add"){
-            return <AddProduct/>
+    const MyComponent = () => {
+        if (btnSelect === "Add") {
+            return <AddProduct />
         }
-        else if(btnSelect === "Update"){
-            return <ChangeProduct/>
+        else if (btnSelect === "Update") {
+            return <ChangeProduct />
         }
     }
-    
-    const Data = (e)=>{
-            setBtn(e.target.value)
-            setActive(current => !current)         
+
+    const Data = (e) => {
+        setBtn(e.target.value)
+        setActive(current => !current)
     }
     return (
         <>
@@ -27,16 +27,16 @@ function ControlPanel() {
             <div className='container'><div className='mt-4'>
                 <div className="btn-group btn-success">
                     <button className={`btn btn-success`} style={{
-          backgroundColor: isActive ? 'rgb(27, 89, 3)' : '',
-          color: isActive ? 'white' : '',
-        }} value="Add" aria-current="page" onClick={Data}>Add New Product</button>
+                        backgroundColor: isActive ? 'rgb(27, 89, 3)' : '',
+                        color: isActive ? 'white' : '',
+                    }} value="Add" aria-current="page" onClick={Data}>Add New Product</button>
                     <button className={`btn btn-success`} style={{
-          backgroundColor: isActive ? '' : "rgb(27, 89, 3)",
-        }} value="Update" onClick={Data}> Updata OR Delete </button>
+                        backgroundColor: isActive ? '' : "rgb(27, 89, 3)",
+                    }} value="Update" onClick={Data}> Updata OR Delete </button>
                 </div>
             </div></div>
             <div>
-            {MyComponent()}
+                {MyComponent()}
             </div>
         </>
     )
