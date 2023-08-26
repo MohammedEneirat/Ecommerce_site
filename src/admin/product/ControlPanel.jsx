@@ -21,6 +21,7 @@ function ControlPanel() {
     }
     return (
         <>
+        
             <div className='text-center mt-4'>
                 <span className='text-center h2'>Product Control Panel</span>
             </div>
@@ -37,8 +38,8 @@ function ControlPanel() {
             </div></div>
             <div>
                 {MyComponent()}
-            </div>
-        </>
+            
+        </div></>
     )
 }
 

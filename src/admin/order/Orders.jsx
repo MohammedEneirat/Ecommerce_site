@@ -7,7 +7,7 @@ function Orders() {
     const [data, setData] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:4000/orders").then((response) => response.json()).then((data) => setData(data))
+        fetch("http://localhost:4000/api/orders").then((response) => response.json()).then((data) => setData(data))
     }, [])
 
     return (

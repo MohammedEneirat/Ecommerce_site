@@ -4,7 +4,10 @@ import Style from '../style/product.module.css'
 function Product() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("  http://localhost:4000/products").then((response) => response.json()).then((data) => setData(data))
+    fetch("http://127.0.0.1:8000/api/products").then((response) => response.json()).then((data) => {
+      setData(data.products)
+      console.log(data)
+    })
   }, [])
   return (
     <>
@@ -16,7 +19,7 @@ function Product() {
             return (
               <div className='col-lg-3 col-md-4 col-sm-6' key={data.id}>
                 <div className={`card ${Style.cards}`}>
-                  <img className={`card-img-top ${Style.myImage}`}src={data.image} alt="Card_cap" />
+                  <img className={`card-img-top ${Style.myImage}`}src={`http://127.0.0.1:8000/storage/${data.image}`} alt="Card_cap" />
                   <div className="card-body">
                     <h5 className="card-title text-center">{data.name}</h5>
                     <p className="card-text">{data.description}</p>

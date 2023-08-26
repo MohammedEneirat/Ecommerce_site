@@ -5,7 +5,10 @@ import Style from "../style/changeData.module.css";
 function ChangeProduct() {
   const [data, setData] = useState([])
   useEffect(() => {
-    fetch("  http://localhost:4000/products").then((response) => response.json()).then((data) => setData(data))
+    fetch("http://127.0.0.1:8000/api/products").then((response) => response.json()).then((data) =>{setData(data.products
+    )
+  console.log(data.products
+    )} )
 
   }, [])
   return (
@@ -62,8 +65,8 @@ function ChangeProduct() {
           return (
             <tr key={e.id}>
               <th scope="row">
-                <input className="form-check-input" type="checkbox" id="checkbox4" />
-                <label className="form-check-label label-table" htmlFor="checkbox4"></label>
+                <input className="form-check-input" type="checkbox" id={e.id} />
+                <label className="form-check-label label-table" htmlFor={e.id}></label>
               </th>
               <td>{e.id}</td>
               <td>{e.name}</td>
